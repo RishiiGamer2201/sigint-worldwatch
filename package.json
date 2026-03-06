@@ -1,0 +1,16 @@
+{
+  "name": "sigint-worldwatch",
+  "version": "1.0.0",
+  "description": "Real-Time Geopolitical Intelligence Dashboard",
+  "private": true,
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "start:backend":  "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "dev": "npm-run-all --parallel start:backend start:frontend",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

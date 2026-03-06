@@ -645,13 +645,13 @@ export default function App() {
   useEffect(() => { fetchNews("all"); }, []);
 
   // Auto-refresh
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (refreshTimerRef.current) clearInterval(refreshTimerRef.current);
     refreshTimerRef.current = setInterval(() => {
       fetchNews(activeRegion, true);
     }, REFRESH_INTERVAL);
     return () => clearInterval(refreshTimerRef.current);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeRegion]);
 
   const handleRegion = (id) => {

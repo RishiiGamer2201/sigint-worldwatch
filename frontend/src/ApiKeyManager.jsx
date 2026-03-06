@@ -181,6 +181,7 @@ export default function ApiKeyManager({ open, onClose, onKeysChange }) {
       setKeys(stored);
       fetchUsage();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   const fetchUsage = useCallback(async () => {

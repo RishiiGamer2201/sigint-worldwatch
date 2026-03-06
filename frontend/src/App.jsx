@@ -252,6 +252,7 @@ function ChatBot({ apiKeys = {}, onOpenSettings }) {
     } finally {
       setLoading(false);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [input, loading, messages]);
 
   const handleKeyDown = (e) => {
